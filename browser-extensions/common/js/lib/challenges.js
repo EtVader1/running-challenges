@@ -124,8 +124,22 @@ function generate_running_challenge_data(data, thisAthleteInfo) {
     challenge_data.push(challenge_start_letters(data, {
       "shortname": "alphabeteer",
       "name": "Alphabeteer",
-      "data": "abcdefghijklmnopqrstuvwyz",
-      "help": "Run at parkrun locations starting with each letter of the English alphabet (except X)."}))
+      "data": {
+          "stages": [
+              {
+                  "shortname": "alphabeteer-basic",
+                  "name": "Alphabeteer",
+                  "data": "abcdefghijklmnopqrstuvwyz",
+                  "badge_icon": "runner-alphabeteer"
+              },
+              {
+                  "shortname": "alphabeteer-master",
+                  "name": "Alphabeteer - Master",
+                  "data": "łöśż",
+                  "badge_icon": "runner-alphabeteer-master"
+              },
+              ]                  
+      "help": "Run at parkrun locations starting with each letter of the English alphabet (except X). Know your Z's from your ż's for master level"}))
     challenge_data.push(challenge_single_parkrun_count(data, 
       {
         "shortname": "double-ton",
